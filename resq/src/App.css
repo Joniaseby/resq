@@ -1,42 +1,273 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(180deg,#eaf5ff 0%, #fff 40%);
+}
+
+.header {
   text-align: center;
+  padding: 18px 0;
+  background: #d6eaff;
+  border-bottom: 1px solid rgba(0,0,0,0.03);
+}
+.header h1 { font-size: 22px; color: #2b6ea3; }
+
+.content {
+  flex: 1;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.alert-box {
+  width: 90%;
+  max-width: 820px;
+  background: #f6f6f6;
+  border-radius: 10px;
+  padding: 32px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  text-align: center;
+  border: 2px solid rgba(230,180,120,0.15);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.alert-box h2 {
+  margin-bottom: 8px;
+  color: #222;
+}
+.alert-box p {
+  color: #4b5563;
+  margin-bottom: 28px;
+}
+
+.sos-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ✨ Added pulse animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(240, 155, 60, 0.7);
   }
-  to {
-    transform: rotate(360deg);
+  70% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 25px rgba(240, 155, 60, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(240, 155, 60, 0);
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+.sos-button {
+  background: linear-gradient(180deg,#f09b3c,#e67a3b);
+  border: none;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  color: #fff;
+  font-size: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  cursor: pointer;
+  transition: transform .12s ease, box-shadow .12s ease;
+  user-select: none;
+  animation: pulse 1.5s infinite; /* 🫀 Added pulse effect here */
+}
+
+.sos-button:active {
+  transform: scale(.98);
+}
+
+.sos-text {
+  margin-top: 8px;
+  font-weight: 700;
+  letter-spacing: .6px;
+}
+
+.status-area {
+  margin-top: 12px;
+  color: #333;
+  font-weight: 600;
+}
+
+.bottom-nav {
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  background:#d6eaff;
+  padding: 12px 0;
+  border-top: 1px solid rgba(0,0,0,0.03);
+}
+
+.nav-item { 
+  text-align:center; 
+  font-size:13px; 
+  color:#2b3b4a;
+}
+.nav-item span { 
+  display:block; 
+  margin-top:6px; 
+}
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(180deg,#eaf5ff 0%, #fff 40%);
+}
+
+.header {
+  text-align: center;
+  padding: 18px 0;
+  background: #d6eaff;
+  border-bottom: 1px solid rgba(0,0,0,0.03);
+}
+.header h1 { font-size: 22px; color: #2b6ea3; }
+
+.content {
+  flex: 1;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.alert-box {
+  width: 90%;
+  max-width: 820px;
+  background: #f6f6f6;
+  border-radius: 10px;
+  padding: 32px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  text-align: center;
+  border: 2px solid rgba(230,180,120,0.15);
+}
+
+.alert-box h2 {
+  margin-bottom: 8px;
+  color: #222;
+}
+.alert-box p {
+  color: #4b5563;
+  margin-bottom: 28px;
+}
+
+.sos-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ✨ Added pulse animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(240, 155, 60, 0.7);
+  }
+  70% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 25px rgba(240, 155, 60, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(240, 155, 60, 0);
   }
 }
 
-.card {
-  padding: 2em;
+.sos-button {
+  background: linear-gradient(180deg,#f09b3c,#e67a3b);
+  border: none;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  color: #fff;
+  font-size: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  cursor: pointer;
+  transition: transform .12s ease, box-shadow .12s ease;
+  user-select: none;
+  animation: pulse 1.5s infinite; /* 🫀 Added pulse effect here */
 }
 
-.read-the-docs {
-  color: #888;
+.sos-button:active {
+  transform: scale(.98);
+}
+
+.sos-text {
+  margin-top: 8px;
+  font-weight: 700;
+  letter-spacing: .6px;
+}
+
+.status-area {
+  margin-top: 12px;
+  color: #333;
+  font-weight: 600;
+}
+
+.bottom-nav {
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  background:#d6eaff;
+  padding: 12px 0;
+  border-top: 1px solid rgba(0,0,0,0.03);
+}
+
+.nav-item { 
+  text-align:center; 
+  font-size:13px; 
+  color:#2b3b4a;
+}
+.nav-item span { 
+  display:block; 
+  margin-top:6px; 
+}
+.sos-button {
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 30px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.sos-button.preparing {
+  animation: pulse 1s infinite;
+}
+
+.sos-button.sent {
+  background-color: green;
+}
+
+.sos-button.failed {
+  background-color: gray;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7);
+  }
+  70% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 20px rgba(255, 0, 0, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+  }
 }
